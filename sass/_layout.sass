@@ -1,0 +1,335 @@
+@use 'base'
+@use'components'
+
+
+header
+    height: 100vh
+    // background: url('https://images.unsplash.com/photo-1479044769763-c28e05b5baa5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80'), linear-gradient(rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.1))
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.1)), url('https://images.unsplash.com/photo-1479044769763-c28e05b5baa5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80')
+    background-size: cover
+    position: relative
+    z-index: 1    
+    background-position: center
+
+    nav
+        width: 100%
+        display: flex
+        padding-top: 1%
+        justify-content: space-between
+        padding-left: 2%
+
+        @include components.phone
+            padding-top: 3%
+        span
+            color: $color-main
+            font-size: 1.5rem
+            font-family: $font-playFair
+            font-weight: bold
+            width: 30%
+        ul
+            width: 35%
+            display: flex
+            justify-content: space-between
+
+            @include components.phone
+                display: none
+
+            @include components.tablet
+                display: none
+
+            li
+
+                a
+                    color: $color-text
+                    font-family: $font-lato
+
+        div
+            display: flex
+            width: 30%
+            justify-content: space-between
+            padding: 0 10%   
+
+            @include components.phone
+                width: 35%
+                padding: 0 5%   
+
+            @include components.tablet
+                width: 35%
+                padding: 0 5%  
+
+            a
+                color: $color-main   
+
+.search
+    padding-right: 10%
+
+.hamburger
+    visibility: hidden
+
+    @include components.phone
+        visibility: visible
+
+    @include components.tablet
+        visibility: visible
+            
+
+// welcome
+.welcome
+    position: absolute
+    z-index: 2
+    top: 45vh   
+    display: flex
+    flex-direction: column
+    
+    width: 100%
+
+    h1
+        font-family: $font-playFair
+        font-size: 3rem
+        text-align: center
+
+    form        
+        display: flex
+        margin: 5vh auto
+        width: 30%
+
+        @include components.phone
+            width: 80%
+
+        input
+            border-radius: 5px 0 0 5px
+            border: none
+            height: 40px
+            width: 100%
+            // border: none
+
+        select
+            height: 40px
+            border-radius: 0 5px 5px 0
+            background-color: $color-main
+            color: $color-grey
+            border: none
+
+
+// about
+.about
+    width: 100%    
+    height: fit-content
+    margin-top: 5%         
+    background-image: url("../images/about.png")
+    background-size: cover    
+    background-position: center
+    padding-bottom: 15%
+        
+    h2
+        color: $color-accent
+        padding-left: 40%
+    h3
+        font-size: 2rem
+        font-weight: bold
+        font-family: $font-playFair
+        padding-left: 40%
+        line-height: 3rem
+
+    p
+        font-family: $font-lato        
+        line-height: 1.5rem        
+        padding: 3% 10% 5% 40%
+
+    a
+        margin-left: 40%
+        background-color: $color-main
+        padding: 1% 0 1% 1%
+        border-radius: 5px
+        color: $color-grey
+        font-family: $font-lato
+
+        span
+            background-color: $color-accent
+            padding: 1%
+            border-radius: 0 5px 5px 0
+
+// order
+.order
+    margin-top: 5%
+
+    h3
+        text-align: center
+        font-family: $font-playFair
+        font-size: 2.5rem
+        font-weight: 700
+
+    ul
+        display: flex
+        padding: 3% 20% 1% 20%
+        justify-content: space-between
+
+        @include components.phone
+            flex-wrap: wrap
+            padding: 10% 1%
+        
+        li
+            width: 20%
+            border-bottom: 2px solid lightgrey            
+            text-align: center
+            padding-bottom: 2%
+            font-family: $font-lato
+
+        li:first-child
+            border-bottom: 2px solid $color-main
+            
+            a                
+                color: $color-text
+                font-family: $font-lato
+            
+            a:first-child
+                color: $color-main
+                
+
+// gallery
+.gallery
+    display: flex
+    flex-wrap: wrap
+    padding: 0 10%
+    justify-content: space-between
+    height: 70vh
+
+    @include components.phone
+        height: fit-content
+        padding: 0 1%
+
+    @include components.tablet
+        height: fit-content
+        padding: 0 1%
+        justify-content: space-around
+        
+    .img01
+        background-image: url('https://source.unsplash.com/fdlZBWIP0aM')    
+        @include components.menu-img   
+           
+
+    .img02
+        background-image: url('https://source.unsplash.com/mmnKI8kMxpc')
+        @include components.menu-img 
+
+    .img03
+        background-image: url('https://source.unsplash.com/WbA_PCv3_Co')
+        @include components.menu-img 
+
+    .img04
+        background-image: url('https://source.unsplash.com/SH6vc3VOOwE')
+        @include components.menu-img 
+
+    .img05
+        background-image: url('https://source.unsplash.com/ohnRXPYXDEE')
+        @include components.menu-img 
+    
+    .img06
+        background-image: url('https://source.unsplash.com/j3gz0KReZbA')
+        @include components.menu-img 
+
+    .img07
+        background-image: url('https://source.unsplash.com/FFqNATH27EM')
+        @include components.menu-img 
+
+    .img08
+        background-image: url('https://source.unsplash.com/RwoKbjJdYvE')
+        @include components.menu-img 
+
+.dots
+    padding: 0!important   
+    justify-content: center !important    
+       
+    li
+        width: fit-content !important
+        border-bottom: none !important
+        color: $color-main
+        font-size: 1.1rem
+        padding-left: 2%
+        
+
+// contact
+.book
+    background-image: url('https://source.unsplash.com/ThtzElwvwyM')
+    background-size: cover
+    background-position: center
+    padding: 3%
+    display: flex
+    flex-direction: column
+    text-align: center    
+
+    @include components.phone
+        padding: 0
+
+    h2
+        color: $color-main
+        font-family: $font-lato        
+
+    h3
+        color: $color-text
+        font-size: 2.5rem
+        font-weight: bold        
+        padding-top: 2%
+        padding-bottom: 2%
+        font-family: $font-playFair
+
+    i
+        display: block
+        margin: 15px auto
+        color: $color-main        
+        border: 1px solid $color-main
+        padding: 1%
+        border-radius: 100%   
+        font-size: 2rem 
+        text-align: center
+            
+        
+    span
+        padding: 1% 0
+        font-family: $font-lato        
+
+    a
+        color: $color-main
+        font-size: 1.6rem
+        font-family: $font-playFair
+        text-align: center
+        padding-bottom: 3%
+
+    div
+        display: flex 
+        justify-content: space-around
+        text-align: center    
+
+        @include components.phone
+            display: inline-block
+            background-color: $color-main
+            color: white
+            width: 100%
+            margin: 0 !important
+
+        section
+            display: flex
+            flex-direction: column
+
+            @include components.phone
+                padding: 3% 0
+
+            span:first-child
+                font-family: $font-lato
+                font-weight: 700
+
+            span:nth-child(2)
+                font-family: $font-playFair
+                font-size: 1.2rem
+
+    img
+        padding: 5% 10% 10% 15%
+        
+        @include components.phone
+            display: none
+
+// footer
+footer
+    margin: 5% 0%
+    text-align: center
+    font-family: $font-lato
